@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Upscaler HD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>✨ AI Image HD Upscaler</h1>
+        <p>Tingkatkan kualitas gambar menjadi HD (2x atau 4x) gratis.</p>
+
+        <form id="uploadForm">
+            <div class="file-drop-area" id="dropArea">
+                <span class="choose-file-button">Pilih Gambar</span>
+                <span class="file-message">atau drag & drop disini</span>
+                <input class="file-input" type="file" name="image" accept="image/*" required>
+            </div>
+            <div id="filePreviewName" class="file-name"></div>
+
+            <div class="options">
+                <label>Multiplier:</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="scale" value="2" checked>
+                        <span>2x HD</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="scale" value="4">
+                        <span>4x Ultra HD</span>
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" id="submitBtn">🚀 Mulai Upscale</button>
+        </form>
+
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Sedang memproses... (Bisa memakan waktu 10-30 detik)</p>
+        </div>
+
+        <div id="resultArea" class="hidden">
+            <h3>Hasil:</h3>
+            <div class="image-wrapper">
+                <img id="resultImage" src="" alt="Hasil Upscale">
+            </div>
+            <a id="downloadLink" href="#" class="download-btn" download="upscaled.png">Download PNG</a>
+        </div>
+        
+        <div id="errorArea" class="hidden error-msg"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
