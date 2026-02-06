@@ -1,0 +1,13 @@
+{
+  "name": "image-upscaler-hd",
+  "version": "1.0.0",
+  "description": "Upscale image using nodejs and vercel",
+  "scripts": {
+    "start": "node api/upscale.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "form-data": "^4.0.0",
+    "formidable": "^3.5.1"
+  }
+}
